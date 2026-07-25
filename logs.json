@@ -1,0 +1,10 @@
+{"timestamp":"2026-02-24T18:00:01Z","user":"alice","event":"ConsoleLogin","status":"Success","ip":"10.0.0.5","mfa":"Yes"}
+{"timestamp":"2026-02-24T18:02:15Z","user":"bob","event":"ConsoleLogin","status":"Failed","ip":"185.22.10.44","mfa":"No"}
+{"timestamp":"2026-02-24T18:03:22Z","user":"bob","event":"ConsoleLogin","status":"Failed","ip":"185.22.10.44","mfa":"No"}
+{"timestamp":"2026-02-24T18:04:10Z","user":"bob","event":"ConsoleLogin","status":"Failed","ip":"185.22.10.44","mfa":"No"}
+{"timestamp":"2026-02-24T18:05:00Z","user":"admin","event":"DeleteBucket","status":"Success","ip":"10.0.0.10","mfa":"Yes"}
+{"timestamp":"2026-02-24T18:06:45Z","user":"root","event":"CreateAccessKey","status":"Success","ip":"222.15.9.1","mfa":"No"}
+{"timestamp":"2026-02-24T18:08:12Z","user":"charlie","event":"AttachUserPolicy","status":"Success","ip":"10.0.0.15","policy":"AdministratorAccess"}
+{"timestamp":"2026-02-24T18:09:30Z","user":"bob","event":"ListBuckets","status":"Success","ip":"185.22.10.44"}
+{"timestamp":"2026-02-24T18:10:42Z","user":"unknown","event":"ConsoleLogin","status":"Failed","ip":"103.77.120.55","mfa":"No"}
+{"timestamp":"2026-02-24T18:12:01Z","user":"admin","event":"PutBucketPolicy","status":"Success","ip":"10.0.0.10"}

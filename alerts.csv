@@ -1,0 +1,8 @@
+timestamp,user,event,status,ip,mfa,policy
+2026-02-24 18:02:15+00:00,bob,ConsoleLogin,Failed,185.22.10.44,No,
+2026-02-24 18:03:22+00:00,bob,ConsoleLogin,Failed,185.22.10.44,No,
+2026-02-24 18:04:10+00:00,bob,ConsoleLogin,Failed,185.22.10.44,No,
+2026-02-24 18:05:00+00:00,admin,DeleteBucket,Success,10.0.0.10,Yes,
+2026-02-24 18:06:45+00:00,root,CreateAccessKey,Success,222.15.9.1,No,
+2026-02-24 18:08:12+00:00,charlie,AttachUserPolicy,Success,10.0.0.15,,AdministratorAccess
+2026-02-24 18:10:42+00:00,unknown,ConsoleLogin,Failed,103.77.120.55,No,
