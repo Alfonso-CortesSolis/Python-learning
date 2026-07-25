@@ -1,9 +1,9 @@
 import random
 
 
-def get_valid_guess():
+def get_valid_guess(max_number):
     while True:
-        guess_input = input("Guess a number between 1 and 10: ")
+        guess_input = input(f"Guess a number between 1 and {max_number}: ")
 
         try:
             guess = int(guess_input)
@@ -11,19 +11,33 @@ def get_valid_guess():
             print("Invalid input. Please enter a whole number.")
             continue
 
-        if 1 <= guess <= 10:
+        if 1 <= guess <= max_number:
             return guess
 
-        print("Please enter a number between 1 and 10.")
+        print(f"Please enter a number between 1 and {max_number}.")
+
+def choose_difficulty():
+    while True:
+        difficulty = input("Choose a difficulty level (easy, medium, hard): ").lower().strip()
+
+        if difficulty == "easy":
+            return 10, 5  
+        elif difficulty == "medium":
+            return 50, 10   
+        elif difficulty == "hard":
+            return 100, 15   
+        else:
+            print("Invalid choice. Please choose 'easy', 'medium', or 'hard'.")
 
 
 def play_game():
-    random_num = random.randint(1, 10)
-    guesses_left = 5
+    
+    max_number, guesses_left = choose_difficulty()
+    random_num = random.randint(1, max_number)
     guess_counter = 0
 
     while guesses_left > 0:
-        guess = get_valid_guess()
+        guess = get_valid_guess(max_number)
 
         guess_counter += 1
         guesses_left -= 1
