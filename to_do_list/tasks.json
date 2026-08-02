@@ -6,5 +6,9 @@
   {
     "title": "finish tasks",
     "completed": false
+  },
+  {
+    "title": "walk",
+    "completed": false
   }
 ]
