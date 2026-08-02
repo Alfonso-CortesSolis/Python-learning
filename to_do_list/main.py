@@ -4,11 +4,13 @@ if __name__ == "__main__":
     print(""""
         ==== To-Do List ====
 
-        1. View Tasks
+        1. View Uncompleted Tasks
         2. Add Task
         3. Complete Task
         4. Delete Task
-        5. Quit
+        5. Search Task
+        6. View Completed Tasks
+        7. Quit
     """)
 
     choice = input("What would you like to do? ")

@@ -4,6 +4,16 @@ from pathlib import Path
 TASKS_FILE = Path(__file__).with_name("tasks.json")
 
 
+def _normalize_completed(value):
+    if isinstance(value, bool):
+        return value
+
+    if isinstance(value, str):
+        return value.strip().lower() == "true"
+
+    return bool(value)
+
+
 def _normalize_tasks(tasks):
     if isinstance(tasks, list):
         normalized = []
@@ -12,7 +22,7 @@ def _normalize_tasks(tasks):
                 normalized.append(
                     {
                         "title": task.get("title", ""),
-                        "completed": bool(task.get("completed", False)),
+                        "completed": _normalize_completed(task.get("completed", False)),
                     }
                 )
             elif isinstance(task, str):
@@ -23,7 +33,7 @@ def _normalize_tasks(tasks):
         return [
             {
                 "title": tasks.get("title", ""),
-                "completed": bool(tasks.get("completed", False)),
+                "completed": _normalize_completed(tasks.get("completed", False)),
             }
         ]
 
@@ -62,6 +72,23 @@ def view_tasks():
     print("\nYour Tasks:")
     for index, task in enumerate(tasks, start=1):
         if not task.get("completed", False):
+            pending_titles.append(task["title"])
+            print(f"{index}. {task['title']}")
+    print()
+    return pending_titles
+
+
+def view_completed_tasks():
+    tasks = load_tasks()
+    pending_titles = []
+
+    if not tasks:
+        print("No tasks found.")
+        return pending_titles
+
+    print("\nYour CompletedTasks:")
+    for index, task in enumerate(tasks, start=1):
+        if task.get("completed", True):
             pending_titles.append(task["title"])
             print(f"{index}. {task['title']}")
     print()
