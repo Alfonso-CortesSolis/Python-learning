@@ -10,7 +10,8 @@ if __name__ == "__main__":
         4. Delete Task
         5. Search Task
         6. View Completed Tasks
-        7. Quit
+        7. View Tasks Sorted Alphabetically
+        8. Quit
     """)
 
     choice = input("What would you like to do? ")
