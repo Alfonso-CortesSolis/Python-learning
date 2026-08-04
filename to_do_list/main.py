@@ -11,7 +11,8 @@ if __name__ == "__main__":
         5. Search Task
         6. View Completed Tasks
         7. View Tasks Sorted Alphabetically
-        8. Quit
+        8. Statistics
+        9. Quit
     """)
 
     choice = input("What would you like to do? ")
