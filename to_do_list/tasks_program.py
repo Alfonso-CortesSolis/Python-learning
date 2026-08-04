@@ -1,6 +1,6 @@
 import sys
 
-from utils import add_task, complete_task, delete_task, view_completed_tasks, view_tasks
+from utils import add_task, complete_task, delete_task, load_tasks, view_completed_tasks, view_tasks
 
 
 def run_program(choice):
@@ -26,4 +26,10 @@ def run_program(choice):
     elif choice == "6":
         view_completed_tasks()
     elif choice == "7":
+        tasks = load_tasks()
+        sorted_tasks = sorted(tasks, key=lambda x: x['title'])
+        print("\nTasks Sorted Alphabetically:")
+        for index, task in enumerate(sorted_tasks, start=1):
+            print(f"{index}. {task}")   
+    elif choice == "8":
         sys.exit()
